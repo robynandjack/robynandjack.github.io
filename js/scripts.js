@@ -237,16 +237,34 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var itc_kol = {lat: 49.540068, lng: -124.644046};
+    var start = {lat: 49.295596, lng: -123.026341};
+    var end = {lat: 49.540068, lng: -124.644046};
+
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: itc_kol,
+        zoom: 11,
+        center: end,
         scrollwheel: false
     });
 
-    var marker = new google.maps.Marker({
-        position: itc_kol,
-        map: map
+    var directionsService = new google.maps.DirectionsService();
+    var directionsDisplay = new google.maps.DirectionsRenderer();
+    directionsDisplay.setMap(map); 
+
+//    var marker = new google.maps.Marker({
+//      position: itc_kol,
+//      map: map
+//  })
+
+    var directionsRequest = {
+        origin: start,
+        destination: end,
+        travelMode: 'DRIVING'
+    };
+
+    directionsService.route(directionsRequest, function(response, status) {
+        if (status == 'OK') {
+            directionsDisplay.setDirections(response);
+        }
     });
 }
 
