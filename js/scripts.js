@@ -237,11 +237,11 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var start = {lat: 49.295596, lng: -123.026341};
+    var start = {lat: 49.188981, lng: -124.003758};
     var end = {lat: 49.540068, lng: -124.644046};
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 11,
+        zoom: 8,
         center: end,
         scrollwheel: false
     });
