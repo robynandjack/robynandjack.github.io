@@ -218,7 +218,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbzII-3WLqYLsaAzn1aytPnim5WNIzUMG3v7zr5mJQ/exec', data)
                 .done(function (data) {
                     console.log(data);
                     $('#alert-wrapper').html('');
@@ -237,7 +237,7 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var start = {lat: 49.188981, lng: -124.003758};
+    var start = {lat: 49.296053, lng: -123.026225};
     var end = {lat: 49.540068, lng: -124.644046};
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
