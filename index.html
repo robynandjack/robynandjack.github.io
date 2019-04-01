@@ -304,8 +304,8 @@
                     </button>
                     <div class="section-padding">
                         <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
+                        <p>We can't wait to see you!</p>
+                        <!--<div id="add-to-cal"></div>-->
                     </div>
                 </div>
             </div><!-- /.modal-content -->
@@ -316,7 +316,7 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
+                <p>We would greatly appreciate if you could RSVP before 1st of June.</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
@@ -339,18 +339,32 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
+                                <i class="fa fa-calendar"></i><input type="date" name="attending_from" class="dateclass"
+                                                                     placeholder="Attending from"
+                                                                     value="2019-10-18" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-calendar"></i><input type="date" name="attending_from" class="dateclass"
+                                                                     placeholder="Attending to"
+                                                                     value="2019-10-20" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="guests" class="" min="0"
+                                                                  min="1"
+                                                                  placeholder="Number of guests"
                                                                   required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
+                                <i class="fa fa-utensils"></i><input name="allergies" class=""
+                                                                placeholder="Any allergies?">
                             </div>
                         </div>
                     </div>
